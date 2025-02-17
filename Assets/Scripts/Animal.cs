@@ -4,17 +4,16 @@ using UnityEngine;
 
 public abstract class Animal
 {
-    public abstract void move(Vector2 direction);
+    public void move(Vector2 direction)
+    {
+
+    }
     public float moveSpeed;
     public float maxHealth;
     public float curHealth;
 }
 public class Seal : Animal
 {
-    public override void move(Vector2 direction)
-    {
-        moveSpeed = 1;
-    }
 
     public float fat;
     public void swim()
@@ -24,10 +23,6 @@ public class Seal : Animal
 }
 public class Monkey : Animal
 {
-    public override void move(Vector2 direction)
-    {
-
-    }
 
     public float volume;
     public void sling()
@@ -41,10 +36,6 @@ public class Monkey : Animal
 }
 public class Lion : Animal
 {
-    public override void move(Vector2 direction)
-    {
-
-    }
 
     public float volume;
     public void roar()
@@ -54,10 +45,6 @@ public class Lion : Animal
 }
 public class Giraffe : Animal
 {
-    public override void move(Vector2 direction)
-    {
-
-    }
 
     public float neckLength;
     public void swingNeck()

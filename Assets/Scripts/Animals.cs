@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Animals : MonoBehaviour
 {
+    //public Random rand = new Random();
     Animal Lion = new Lion();
     Animal Seal = new Seal();
     Animal Giraffe = new Giraffe();
@@ -31,6 +32,6 @@ public class Animals : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Lion.move(new Vector2(rand.Next(0, 1), rand(0, 1)));
     }
 }
