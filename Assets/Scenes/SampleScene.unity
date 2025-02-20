@@ -395,7 +395,12 @@ MonoBehaviour:
   moveSpeed: 0
   maxHealth: 0
   curHealth: 0
-  fat: 0
+  circle: {fileID: 0}
+  player: {fileID: 899658112}
+  AnimalRange: 0
+  SealIsTurning: 0
+  SealTimer: 0
+  spr: {fileID: 0}
 --- !u!1 &206330664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,14 +1500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923010efa2e102a4e8517e2ccb16c923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circle: {fileID: 0}
-  player: {fileID: 0}
-  AnimalRange: 0
-  SealIsTurning: 0
-  SealTimer: 0
-  spr: {fileID: 0}
-  brick: []
-  brickNum: 0
   lion: {fileID: 256077600}
   seal: {fileID: 72849850}
   monkey: {fileID: 1546737655}
