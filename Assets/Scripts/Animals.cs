@@ -17,7 +17,6 @@ public class Animals : MonoBehaviour, AnimalInteractable
     Vector2 sealDirection;
     Vector2 monkeyDirection;
     Vector2 giraffeDirection;
-
     void Start()
     {
         lion.maxHealth = 8;
