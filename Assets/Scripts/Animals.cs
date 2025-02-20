@@ -98,10 +98,14 @@ public class Animals : MonoBehaviour, AnimalInteractable
         {
             brick[brickNum].SetActive(true);
             brick[brickNum].transform.position = transform.position;
-            brick[brickNum].GetComponent<BulletController>().fired(mouseDirection);
+            brick[brickNum].GetComponent<BrickController>().fired(player.transform.position - transform.position);
 
 
             brickNum++;
+            if (brickNum > 2)
+            {
+                brickNum = 0;
+            }
         }
     }
 }
