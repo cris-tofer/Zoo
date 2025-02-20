@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animals : MonoBehaviour
+public class Animals : MonoBehaviour, AnimalInteractable
 {
     //public Random rand = new Random();
     Animal Lion = new Lion();
     Animal Seal = new Seal();
     Animal Giraffe = new Giraffe();
-    Animal Monkey= new Monkey();
+    Animal Monkey = new Monkey();
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +33,10 @@ public class Animals : MonoBehaviour
     void Update()
     {
         //Lion.move(new Vector2(rand.Next(0, 1), rand(0, 1)));
+    }
+
+    void AnimalInteraction()
+    {
+
     }
 }
