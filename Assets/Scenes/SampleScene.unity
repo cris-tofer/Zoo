@@ -2152,12 +2152,12 @@ MonoBehaviour:
   moveSpeed: 0
   maxHealth: 0
   curHealth: 0
-  circle: {fileID: 0}
+  circle: {fileID: 1262530007}
   player: {fileID: 329660333}
   AnimalRange: 0
   SealIsTurning: 0
   SealTimer: 0
-  spr: {fileID: 0}
+  spr: {fileID: 1262530008}
 --- !u!1001 &1286598020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2520,7 +2520,7 @@ MonoBehaviour:
   moveSpeed: 0
   maxHealth: 0
   curHealth: 0
-  circle: {fileID: 0}
+  circle: {fileID: 1453286671}
   player: {fileID: 329660333}
   AnimalRange: 0
   brick:

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monkey : Animal
+public class Monkey : Animal, AnimalInteractable
 {
     public CircleCollider2D circle;
     public GameObject player;
@@ -13,10 +13,10 @@ public class Monkey : Animal
     {
         if (Input.GetKeyUp(KeyCode.E) && AnimalRange == true)
         {
-            sling();
+            AnimalInteraction();
         }
     }
-    public void sling()
+    public void AnimalInteraction()
     {
         brick[brickNum].SetActive(true);
         brick[brickNum].transform.position = transform.position;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seal : Animal
+public class Seal : Animal, AnimalInteractable
 {
     public CircleCollider2D circle;
     public GameObject player;
@@ -17,12 +17,13 @@ public class Seal : Animal
             if (this.name == "Seal")
             {
                 SealIsTurning = true;
-                swim();
+                
             }
         }
-        if (SealIsTurning)
+        if (SealIsTurning == true)
         {
-            swim();
+            AnimalInteraction();
+            SealTimer += Time.deltaTime;
         }
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -38,12 +39,12 @@ public class Seal : Animal
     {
         AnimalRange = false;
     }
-    public void swim()
+    public void AnimalInteraction()
     {
 
         float t = Time.realtimeSinceStartup;
         spr.color = Color.blue;
-        Vector3 basePosition = new Vector3(-6.6f, 3.8f);
+        Vector3 basePosition = new Vector3(-6, 3);
         float radius = 1.0f;
         transform.position = new Vector3(Mathf.Cos(t * 2.0f), Mathf.Sin(t * 2.0f)) * radius + basePosition;
         if (SealTimer > 2.5f)
