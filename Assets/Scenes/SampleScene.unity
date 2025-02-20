@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 72849848}
   - component: {fileID: 72849847}
   - component: {fileID: 72849849}
+  - component: {fileID: 72849850}
   m_Layer: 0
   m_Name: Seal
   m_TagString: Untagged
@@ -373,12 +374,29 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.75
+--- !u!114 &72849850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72849846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923010efa2e102a4e8517e2ccb16c923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circle: {fileID: 72849849}
+  player: {fileID: 899658112}
+  AnimalRange: 0
+  SealIsTurning: 0
+  SealAngle: 0
 --- !u!1 &206330664
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +492,7 @@ GameObject:
   - component: {fileID: 256077598}
   - component: {fileID: 256077597}
   - component: {fileID: 256077599}
+  - component: {fileID: 256077600}
   m_Layer: 0
   m_Name: Lion
   m_TagString: Untagged
@@ -577,12 +596,29 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.24
+--- !u!114 &256077600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256077596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923010efa2e102a4e8517e2ccb16c923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circle: {fileID: 256077599}
+  player: {fileID: 899658112}
+  AnimalRange: 0
+  SealIsTurning: 0
+  SealAngle: 0
 --- !u!1 &377302415
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,6 +2124,7 @@ GameObject:
   - component: {fileID: 1546737653}
   - component: {fileID: 1546737652}
   - component: {fileID: 1546737654}
+  - component: {fileID: 1546737655}
   m_Layer: 0
   m_Name: Monkey
   m_TagString: Untagged
@@ -2191,12 +2228,29 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.6
+--- !u!114 &1546737655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546737651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923010efa2e102a4e8517e2ccb16c923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circle: {fileID: 1546737654}
+  player: {fileID: 899658112}
+  AnimalRange: 0
+  SealIsTurning: 0
+  SealAngle: 0
 --- !u!1 &1621156122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,6 +2734,7 @@ GameObject:
   - component: {fileID: 2125865970}
   - component: {fileID: 2125865969}
   - component: {fileID: 2125865971}
+  - component: {fileID: 2125865972}
   m_Layer: 0
   m_Name: Giraffe
   m_TagString: Untagged
@@ -2783,12 +2838,29 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.76
+--- !u!114 &2125865972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125865968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923010efa2e102a4e8517e2ccb16c923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circle: {fileID: 2125865971}
+  player: {fileID: 899658112}
+  AnimalRange: 0
+  SealIsTurning: 0
+  SealAngle: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
