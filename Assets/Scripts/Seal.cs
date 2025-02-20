@@ -17,11 +17,12 @@ public class Seal : Animal
             if (this.name == "Seal")
             {
                 SealIsTurning = true;
-            }
-            else
-            {
                 swim();
             }
+        }
+        if (SealIsTurning)
+        {
+            swim();
         }
     }
     void OnTriggerEnter2D(Collider2D other)
