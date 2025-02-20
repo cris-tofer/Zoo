@@ -14,34 +14,42 @@ public class Animals : MonoBehaviour, AnimalInteractable
     public SpriteRenderer spr;
     public GameObject[] brick;
     public int brickNum;
-    //public Random rand = new Random();
-    Animal Lion = new Lion();
-    Animal Seal = new Seal();
-    Animal Giraffe = new Giraffe();
-    Animal Monkey = new Monkey();
+    public Lion lion;
+    public Seal seal;
+    public Monkey monkey;
+    public Giraffe giraffe;
+
+    float dChangeTimer = 0;
+
+    Vector2 lionDirection;
+    Vector2 sealDirection;
+    Vector2 monkeyDirection;
+    Vector2 giraffeDirection;
     // Start is called before the first frame update
     void Start()
     {
-        Lion.maxHealth = 8;
-        Lion.curHealth = Lion.maxHealth;
-        Lion.moveSpeed = 8;
+        lion.maxHealth = 8;
+        lion.curHealth = lion.maxHealth;
+        lion.moveSpeed = 8;
 
-        Seal.maxHealth = 10;
-        Seal.curHealth = Seal.maxHealth;
-        Seal.moveSpeed = 1;
+        seal.maxHealth = 10;
+        seal.curHealth = seal.maxHealth;
+        seal.moveSpeed = 1;
 
-        Giraffe.maxHealth = 20;
-        Giraffe.curHealth = Giraffe.maxHealth;
-        Giraffe.moveSpeed = 20;
+        giraffe.maxHealth = 20;
+        giraffe.curHealth = giraffe.maxHealth;
+        giraffe.moveSpeed = 20;
 
-        Monkey.maxHealth = 5;
-        Monkey.curHealth = Monkey.maxHealth;
-        Monkey.moveSpeed = 5;
+        monkey.maxHealth = 5;
+        monkey.curHealth = monkey.maxHealth;
+        monkey.moveSpeed = 5;
     }
 
     // Update is called once per frame
     void Update()
     {
+        dChangeTimer -= Time.deltaTime;
+
         if (Input.GetKeyUp(KeyCode.E) && AnimalRange == true)
         {
             if (this.name == "Seal")
@@ -53,14 +61,30 @@ public class Animals : MonoBehaviour, AnimalInteractable
                 AnimalInteraction();
             }
         }
-        //Lion.move(new Vector2(rand.Next(0, 1), rand(0, 1)));
 
         if (SealIsTurning == true)
         {
             AnimalInteraction();
             SealTimer += Time.deltaTime;
-           
+
         }
+        else
+        {
+            seal.move(sealDirection, seal.moveSpeed);
+        }
+
+        if (dChangeTimer <= 0)
+        {
+            lionDirection = Random.insideUnitCircle;
+            sealDirection = Random.insideUnitCircle;
+            monkeyDirection = Random.insideUnitCircle;
+            giraffeDirection = Random.insideUnitCircle;
+            dChangeTimer = 0.2f;
+        }
+        lion.move(lionDirection, lion.moveSpeed);
+        monkey.move(monkeyDirection, monkey.moveSpeed);
+        giraffe.move(giraffeDirection, giraffe.moveSpeed);
+
     }
 
     void OnTriggerEnter2D(Collider2D other)

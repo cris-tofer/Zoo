@@ -389,17 +389,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 72849846}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 923010efa2e102a4e8517e2ccb16c923, type: 3}
+  m_Script: {fileID: 11500000, guid: 26549ce45f7d7da478db98583ed9a270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circle: {fileID: 72849849}
-  player: {fileID: 899658112}
-  AnimalRange: 0
-  SealIsTurning: 0
-  SealTimer: 0
-  spr: {fileID: 72849847}
-  brick: []
-  brickNum: 0
+  moveSpeed: 0
+  maxHealth: 0
+  curHealth: 0
+  fat: 0
 --- !u!1 &206330664
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,17 +610,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 256077596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 923010efa2e102a4e8517e2ccb16c923, type: 3}
+  m_Script: {fileID: 11500000, guid: c15c4ce3ed1785a49ac70d72cc2205ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circle: {fileID: 256077599}
-  player: {fileID: 899658112}
-  AnimalRange: 0
-  SealIsTurning: 0
-  SealTimer: 0
-  spr: {fileID: 0}
-  brick: []
-  brickNum: 0
+  moveSpeed: 0
+  maxHealth: 0
+  curHealth: 0
+  volume: 0
 --- !u!1 &377302415
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,12 +786,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.234987, y: -0.03808879, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 899658117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &543919877
 GameObject:
@@ -1181,12 +1173,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5724694532282739281, guid: 12fca00c95040054f866d647c17771d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 519420032}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12fca00c95040054f866d647c17771d7, type: 3}
 --- !u!1 &899658112 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7622336921256895019, guid: 12fca00c95040054f866d647c17771d7, type: 3}
+  m_PrefabInstance: {fileID: 899658111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &899658117 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5724694532282739281, guid: 12fca00c95040054f866d647c17771d7, type: 3}
   m_PrefabInstance: {fileID: 899658111}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &988822919
@@ -1466,6 +1466,62 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec725fd32f050ed4b922cd9c0cb0f4a1, type: 3}
+--- !u!1 &1045123825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1045123827}
+  - component: {fileID: 1045123826}
+  m_Layer: 0
+  m_Name: animalController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1045123826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045123825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923010efa2e102a4e8517e2ccb16c923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circle: {fileID: 0}
+  player: {fileID: 0}
+  AnimalRange: 0
+  SealIsTurning: 0
+  SealTimer: 0
+  spr: {fileID: 0}
+  brick: []
+  brickNum: 0
+  lion: {fileID: 256077600}
+  seal: {fileID: 72849850}
+  monkey: {fileID: 1546737655}
+  giraffe: {fileID: 2125865972}
+--- !u!4 &1045123827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045123825}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.1953278, y: 0.94317204, z: -0.10126941}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1084585127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,15 +2486,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1546737651}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 923010efa2e102a4e8517e2ccb16c923, type: 3}
+  m_Script: {fileID: 11500000, guid: c4c5432890e8562449e97c4acc03c014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circle: {fileID: 1546737654}
+  moveSpeed: 0
+  maxHealth: 0
+  curHealth: 0
+  circle: {fileID: 0}
   player: {fileID: 899658112}
   AnimalRange: 0
-  SealIsTurning: 0
-  SealTimer: 0
-  spr: {fileID: 0}
   brick:
   - {fileID: 876651214}
   - {fileID: 1944884123}
@@ -3051,22 +3107,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2125865968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 923010efa2e102a4e8517e2ccb16c923, type: 3}
+  m_Script: {fileID: 11500000, guid: 85623a7dadc3585469fadb97cd2cdab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circle: {fileID: 2125865971}
-  player: {fileID: 899658112}
-  AnimalRange: 0
-  SealIsTurning: 0
-  SealTimer: 0
-  spr: {fileID: 0}
-  brick: []
-  brickNum: 0
+  moveSpeed: 0
+  maxHealth: 0
+  curHealth: 0
+  neckLength: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
   - {fileID: 899658111}
   - {fileID: 1024692917}
   - {fileID: 61860362}
@@ -3080,3 +3131,4 @@ SceneRoots:
   - {fileID: 1043402472}
   - {fileID: 642528508}
   - {fileID: 1414398363}
+  - {fileID: 1045123827}
