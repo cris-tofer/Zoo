@@ -25,6 +25,7 @@ public class Animals : MonoBehaviour, AnimalInteractable
     Vector2 sealDirection;
     Vector2 monkeyDirection;
     Vector2 giraffeDirection;
+    // Start is called before the first frame update
     void Start()
     {
         lion.maxHealth = 8;
@@ -130,5 +131,11 @@ public class Animals : MonoBehaviour, AnimalInteractable
                 brickNum = 0;
             }
         }
+        if (dChangeTimer <= 0)
+        {
+            lionDirection = Random.insideUnitCircle;
+            dChangeTimer = 0.2f;
+        }
+        lion.move(lionDirection, lion.moveSpeed);
     }
 }
