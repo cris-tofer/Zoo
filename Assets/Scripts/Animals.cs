@@ -30,7 +30,7 @@ public class Animals : MonoBehaviour, AnimalInteractable
 
         giraffe.maxHealth = 20;
         giraffe.curHealth = giraffe.maxHealth;
-        giraffe.moveSpeed = 20;
+        giraffe.moveSpeed = 6;
 
         monkey.maxHealth = 5;
         monkey.curHealth = monkey.maxHealth;
