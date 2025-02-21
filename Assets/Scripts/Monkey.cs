@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Monkey : Animal, AnimalInteractable
 {
-    public CircleCollider2D circle;
     public GameObject player;
     public bool AnimalRange = false;
     public GameObject[] brick;
@@ -29,7 +28,7 @@ public class Monkey : Animal, AnimalInteractable
             brickNum = 0;
         }
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (player.transform.position == other.transform.position)
         {

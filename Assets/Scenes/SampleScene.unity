@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 174565036}
   - component: {fileID: 174565035}
   m_Layer: 0
-  m_Name: GiraffeExhibit
+  m_Name: ChameleonExhibit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2520,7 +2520,6 @@ MonoBehaviour:
   moveSpeed: 0
   maxHealth: 0
   curHealth: 0
-  circle: {fileID: 1453286671}
   player: {fileID: 329660333}
   AnimalRange: 0
   brick:
@@ -2667,33 +2666,17 @@ GameObject:
   m_Component:
   - component: {fileID: 1526957006}
   - component: {fileID: 1526957005}
-  - component: {fileID: 1526957001}
   - component: {fileID: 1526957004}
   - component: {fileID: 1526957003}
   - component: {fileID: 1526957002}
+  - component: {fileID: 1526957007}
   m_Layer: 0
-  m_Name: Giraffe
+  m_Name: Chameleon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1526957001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526957000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85623a7dadc3585469fadb97cd2cdab7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0
-  maxHealth: 0
-  curHealth: 0
-  neckLength: 0
 --- !u!50 &1526957002
 Rigidbody2D:
   serializedVersion: 4
@@ -2833,7 +2816,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2858,6 +2841,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 467924685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1526957007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526957000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fef0f2142c40f4999f8776139cbf0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  maxHealth: 0
+  curHealth: 0
+  player: {fileID: 329660333}
+  spr: {fileID: 1526957005}
+  AnimalRange: 0
+  isChanged: 0
+  changeTimer: 0
 --- !u!1001 &1647620137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2952,7 +2955,7 @@ MonoBehaviour:
   lion: {fileID: 1061399378}
   seal: {fileID: 1262530009}
   monkey: {fileID: 1453286673}
-  giraffe: {fileID: 1526957001}
+  chameleon: {fileID: 1526957007}
 --- !u!4 &1760792737
 Transform:
   m_ObjectHideFlags: 0
