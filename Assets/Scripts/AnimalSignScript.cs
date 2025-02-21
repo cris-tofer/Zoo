@@ -95,7 +95,7 @@ public class AnimalSignScript : MonoBehaviour, IInteractable
                 exhibitInfo.SetText("...This Exhibit is for the Monkey, an interesting creature with many features akin to that of a human! They swing around the jungle and eat bananas!");
                 break;
             case 3:
-                exhibitInfo.SetText("...This Exhibit is for the Chameleon, a long-necked Herbivore that spends its time plucking the leaves off of trees! They often reside in warm, expansive locales, where not many obstacles reside.");
+                exhibitInfo.SetText("...This Exhibit is for the Chameleon, a small Herbivore that spends its time plucking the leaves off of trees! They often reside in warm jungles.");
                 break;
         }
     }
