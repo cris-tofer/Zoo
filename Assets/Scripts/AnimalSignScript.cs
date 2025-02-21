@@ -31,13 +31,12 @@ public class AnimalSignScript : MonoBehaviour, IInteractable
             ExhibitInfoCanvas.SetActive(true);
             canvasTimer = 0;
         }
-        if (canvasTimer <= 3.5f && canvasActive)
+        if (canvasTimer <= 3.5f && ExhibitInfoCanvas.GetComponent<Canvas>() != null)
         {
             canvasTimer += Time.deltaTime;
         }
-        else
-        {
-            canvasActive = false;
+        if (canvasTimer >= 3.5f)
+        {           
             canvasTimer = 0;
             ExhibitInfoCanvas.SetActive(false);
         }
@@ -95,7 +94,7 @@ public class AnimalSignScript : MonoBehaviour, IInteractable
                 exhibitInfo.SetText("...This Exhibit is for the Monkey, an interesting creature with many features akin to that of a human! They swing around the jungle and eat bananas!");
                 break;
             case 3:
-                Debug.Log("...This Exhibit is for the Chameleon, a long-necked Herbivore that spends its time plucking the leaves off of trees! They often reside in warm, expansive locales, where not many obstacles reside.");
+                exhibitInfo.SetText("...This Exhibit is for the Chameleon, a long-necked Herbivore that spends its time plucking the leaves off of trees! They often reside in warm, expansive locales, where not many obstacles reside.");
                 break;
         }
     }
