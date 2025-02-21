@@ -31,12 +31,13 @@ public class AnimalSignScript : MonoBehaviour, IInteractable
             ExhibitInfoCanvas.SetActive(true);
             canvasTimer = 0;
         }
-        if (canvasTimer <= 3.5f && ExhibitInfoCanvas.GetComponent<Canvas>() != null)
+        if (canvasTimer <= 3.5f && canvasActive)
         {
             canvasTimer += Time.deltaTime;
         }
         if (canvasTimer >= 3.5f)
-        {           
+        {
+            canvasActive = false;
             canvasTimer = 0;
             ExhibitInfoCanvas.SetActive(false);
         }

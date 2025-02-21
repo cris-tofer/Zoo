@@ -4227,7 +4227,7 @@ MonoBehaviour:
   lion: {fileID: 1061399378}
   seal: {fileID: 1262530009}
   monkey: {fileID: 1453286673}
-  chameleon: {fileID: 0}
+  chameleon: {fileID: 1526957007}
 --- !u!4 &1760792737
 Transform:
   m_ObjectHideFlags: 0
