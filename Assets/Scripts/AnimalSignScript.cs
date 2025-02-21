@@ -2,12 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class AnimalSignScript : MonoBehaviour, IInteractable
 {
     public CircleCollider2D circleCollider;
     public GameObject player;
     public bool inRange = false;
+    public GameObject canvas;
+    public GameObject ExhibitInfoCanvas;
+    public TextMeshProUGUI exhibitInfo;
+    public float canvasTimer;
+    public bool canvasActive;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,26 +26,43 @@ public class AnimalSignScript : MonoBehaviour, IInteractable
     {
         if (Input.GetKeyUp(KeyCode.E) && inRange == true)
         {
+            canvasActive = true;
             Sign();
+            ExhibitInfoCanvas.SetActive(true);
+            canvasTimer = 0;
         }
+        if (canvasTimer <= 3.5f && canvasActive)
+        {
+            canvasTimer += Time.deltaTime;
+        }
+        else
+        {
+            canvasActive = false;
+            canvasTimer = 0;
+            ExhibitInfoCanvas.SetActive(false);
+        }
+
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (player.transform.position == collision.transform.position)
         {
             inRange = true;
             Debug.Log("...Player In Range");
+            canvas.SetActive(true);
         }
 
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         inRange = false;
+        canvas.SetActive(false);
     }
 
     public void Sign()
     {
+        
         if (this.name == "SealExhibit")
         {
             Interact(0);
@@ -62,16 +86,16 @@ public class AnimalSignScript : MonoBehaviour, IInteractable
         switch (signnum)
         {
             case 0:
-                Debug.Log("...This Exhibit is for the Seal, a carnivorous animal that resides in cool and icy terrain!");
+                exhibitInfo.SetText("...This Exhibit is for the Seal, a carnivorous animal that resides in cool and icy terrain!");
                 break;
             case 1:
-                Debug.Log("...This Exhibit is for the Lion, a carnivorous animal that hunts in packs and is high up on the food chain!");
+                exhibitInfo.SetText("...This Exhibit is for the Lion, a carnivorous animal that hunts in packs and is high up on the food chain!");
                 break;
             case 2:
-                Debug.Log("...This Exhibit is for the Monkey, an interesting creature with many features akin to that of a human! They swing around the jungle and eat bananas!");
+                exhibitInfo.SetText("...This Exhibit is for the Monkey, an interesting creature with many features akin to that of a human! They swing around the jungle and eat bananas!");
                 break;
             case 3:
-                Debug.Log("...This Exhibit is for the Giraffe, a long-necked Herbivore that spends its time plucking the leaves off of trees! They often reside in warm, expansive locales, where not many obstacles reside.");
+                exhibitInfo.SetText("...This Exhibit is for the Giraffe, a long-necked Herbivore that spends its time plucking the leaves off of trees! They often reside in warm, expansive locales, where not many obstacles reside.");
                 break;
         }
     }
