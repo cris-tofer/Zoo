@@ -75,7 +75,7 @@ public class AnimalSignScript : MonoBehaviour, IInteractable
         {
             Interact(2);
         }
-        if (this.name == "GiraffeExhibit")
+        if (this.name == "ChameleonExhibit")
         {
             Interact(3);
         }
@@ -95,7 +95,7 @@ public class AnimalSignScript : MonoBehaviour, IInteractable
                 exhibitInfo.SetText("...This Exhibit is for the Monkey, an interesting creature with many features akin to that of a human! They swing around the jungle and eat bananas!");
                 break;
             case 3:
-                exhibitInfo.SetText("...This Exhibit is for the Giraffe, a long-necked Herbivore that spends its time plucking the leaves off of trees! They often reside in warm, expansive locales, where not many obstacles reside.");
+                Debug.Log("...This Exhibit is for the Chameleon, a long-necked Herbivore that spends its time plucking the leaves off of trees! They often reside in warm, expansive locales, where not many obstacles reside.");
                 break;
         }
     }

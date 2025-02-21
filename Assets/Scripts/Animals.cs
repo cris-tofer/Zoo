@@ -9,14 +9,14 @@ public class Animals : MonoBehaviour, AnimalInteractable
     public Lion lion;
     public Seal seal;
     public Monkey monkey;
-    public Giraffe giraffe;
+    public Chameleon chameleon;
 
     float dChangeTimer = 0;
 
     Vector2 lionDirection;
     Vector2 sealDirection;
     Vector2 monkeyDirection;
-    Vector2 giraffeDirection;
+    Vector2 chameleonDirection;
     void Start()
     {
         lion.maxHealth = 8;
@@ -27,9 +27,9 @@ public class Animals : MonoBehaviour, AnimalInteractable
         seal.curHealth = seal.maxHealth;
         seal.moveSpeed = 1;
 
-        giraffe.maxHealth = 20;
-        giraffe.curHealth = giraffe.maxHealth;
-        giraffe.moveSpeed = 6;
+        chameleon.maxHealth = 3;
+        chameleon.curHealth = chameleon.maxHealth;
+        chameleon.moveSpeed = 2;
 
         monkey.maxHealth = 5;
         monkey.curHealth = monkey.maxHealth;
@@ -50,11 +50,11 @@ public class Animals : MonoBehaviour, AnimalInteractable
             lionDirection = Random.insideUnitCircle;
             sealDirection = Random.insideUnitCircle;
             monkeyDirection = Random.insideUnitCircle;
-            giraffeDirection = Random.insideUnitCircle;
+            chameleonDirection = Random.insideUnitCircle;
             dChangeTimer = 0.2f;
         }
         lion.move(lionDirection, lion.moveSpeed);
         monkey.move(monkeyDirection, monkey.moveSpeed);
-        giraffe.move(giraffeDirection, giraffe.moveSpeed);
+        chameleon.move(chameleonDirection, chameleon.moveSpeed);
     }
 }

@@ -26,7 +26,7 @@ public class Seal : Animal, AnimalInteractable
             SealTimer += Time.deltaTime;
         }
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (player.transform.position == other.transform.position)
         {
